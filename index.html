@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Тест по JavaScript</title>
+</head>
+<body>
+<div class="quiz-container">
+    <div class="quiz-header">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="question-count">Вопрос <span id="current-question">1</span> из <span id="total-questions">10</span></div>
+        <div class="header-content">
+            <h1>Тест по JavaScript</h1>
+            <button class="start" id="start-btn">Начать</button>
+        </div>
+        <div class="image">
+            <img src="images/photoman.png" alt="man" class="main-image">
+            <img class="vector" src="images/vector/vector1.svg" alt="">
+            <img class="vector2" src="images/vector/vector2.svg" alt="">
+        </div>
+    </div>
+    
+    <div class="quiz-body" id="quiz-body" style="display: none;">
+        <h2 class="question-text" id="question-text"></h2>
+        
+        <div class="answers-container" id="multiple-choice-container">
+            <div class="options-grid" id="options-container"></div>
+        </div>
+        
+        <div class="text-answer-container" id="text-answer-container">
+            <h3>Введите ваш ответ:</h3>
+            <div class="input-group">
+                <input type="text" id="text-answer" placeholder="Введите ответ здесь...">
+                <button class="action-btn" id="submit-text-answer">Ответить</button>
+            </div>
+        </div>
+        
+        <div class="feedback-container" id="feedback-container">
+            <p id="feedback-message"></p>
+        </div>
+        
+        <div class="navigation">
+            <button class="action-btn" id="prev-btn" disabled>Назад</button>
+            <button class="action-btn" id="next-btn">Следующий вопрос</button>
+        </div>
+    </div>
+    
+    <div class="results-container" id="results-container" style="display: none;">
+        <h2>Викторина завершена!</h2>
+        <div class="score-display" id="final-score"></div>
+        <p class="score-text" id="score-text"></p>
+        
+        <div class="answers-review" id="answers-review">
+            <h3>Проверьте ваши ответы:</h3>
+            <div id="review-container"></div>
+        </div>
+        
+        <div class="review-buttons">
+            <button class="action-btn" id="restart-btn">Начать заново</button>
+            <button class="action-btn" id="hide-review-btn">Скрыть ответы</button>
+        </div>
+    </div>
+</div>
+<script src="test.js"></script>
+</body>
+</html>
